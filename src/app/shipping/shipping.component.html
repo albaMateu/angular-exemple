@@ -1,0 +1,8 @@
+<h1>Gastos de envío </h1>
+
+<!--Utilizando este pipe (async) ya no necesitamos guardar la respuesta del fetch en una variable local, sino que nos referenciamos directamene al Observable. -->
+
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>

@@ -9,7 +9,7 @@ export class CartService {
   items=[];
 
   constructor(
-    private http: HttpClient;
+    private http: HttpClient
   ) { }
 
   addToCart (product){
@@ -22,11 +22,11 @@ export class CartService {
 
   clearCart (){
     this.items=[];
-    return this.it
+    return this.items;
   }
   //método para recuperar los datos de envío (tipos y precios)
-  getShippingPrice(){
-    return this.http.get('assets/shipping.');
+  getShippingPrices(){
+    return this.http.get('assets/shipping.json');
   }
 
 }
