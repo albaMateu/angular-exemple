@@ -10,3 +10,16 @@
   <!--currency: Transforma un número en una cadena de moneda (pipe) -->
   <span>{{item.price | currency }}</span>
 </div>
+<!--formGroup enlazar checkoutForm a la etiqueta form --> 
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+<div>
+  <label>Nombre:</label>
+  <input type="text" formControlName="name">
+</div>
+<div>
+  <label>Dirección:</label>
+  <input type="text" formControlName="address">
+</div>
+
+<button class="button" type="submit" >Comprar </button>
+</form>

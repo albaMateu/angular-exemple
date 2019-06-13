@@ -39,8 +39,8 @@ export class CartComponent implements OnInit {
 
   onSubmit(clientData){
     // Processar les dades de pagament ací
-    console.warn("S'ha enviat la vostra comanda", clientData);
- 
+    alert(clientData.name+", s'ha enviat la vostra comanda a la direcció: "+ clientData.address);
+   
     //buidar el carrito
     this.items = this.cartService.clearCart();
     this.checkoutForm.reset();
